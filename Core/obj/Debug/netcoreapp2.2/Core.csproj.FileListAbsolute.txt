@@ -14,3 +14,4 @@ C:\Users\caulf\BerylliumGardenHose\Core\obj\Debug\netcoreapp2.2\Core.AssemblyInf
 C:\Users\caulf\BerylliumGardenHose\Core\obj\Debug\netcoreapp2.2\Core.AssemblyInfo.cs
 C:\Users\caulf\BerylliumGardenHose\Core\obj\Debug\netcoreapp2.2\Core.dll
 C:\Users\caulf\BerylliumGardenHose\Core\obj\Debug\netcoreapp2.2\Core.pdb
+C:\Users\caulf\BerylliumGardenHose\Core\obj\Debug\netcoreapp2.2\Core.csprojAssemblyReference.cache
