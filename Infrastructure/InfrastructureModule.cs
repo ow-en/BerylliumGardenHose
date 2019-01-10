@@ -9,7 +9,8 @@ using Infrastructure.Data.Repositories;
 using Infrastructure.Interfaces;
 using Infrastructure.Logging;
 using Microsoft.Extensions.Logging;
-using ILogger = Microsoft.Extensions.Logging.ILogger;
+using ILogger = Core.Interfaces.Services.ILogger;
+using Module = Autofac.Module;
 
 namespace Infrastructure
 {

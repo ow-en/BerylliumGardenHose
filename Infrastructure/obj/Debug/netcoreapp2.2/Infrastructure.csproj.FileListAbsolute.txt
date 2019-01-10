@@ -12,3 +12,17 @@ C:\Users\caulf\OneDrive\source\repos\Beryllium\Infrastructure\bin\Debug\netcorea
 C:\Users\caulf\OneDrive\source\repos\Beryllium\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.csproj.CopyComplete
 C:\Users\caulf\OneDrive\source\repos\Beryllium\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.dll
 C:\Users\caulf\OneDrive\source\repos\Beryllium\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.pdb
+C:\Users\caulf\BerylliumGardenHose\Infrastructure\bin\Debug\netcoreapp2.2\Infrastructure.deps.json
+C:\Users\caulf\BerylliumGardenHose\Infrastructure\bin\Debug\netcoreapp2.2\Infrastructure.runtimeconfig.json
+C:\Users\caulf\BerylliumGardenHose\Infrastructure\bin\Debug\netcoreapp2.2\Infrastructure.runtimeconfig.dev.json
+C:\Users\caulf\BerylliumGardenHose\Infrastructure\bin\Debug\netcoreapp2.2\Infrastructure.dll
+C:\Users\caulf\BerylliumGardenHose\Infrastructure\bin\Debug\netcoreapp2.2\Infrastructure.pdb
+C:\Users\caulf\BerylliumGardenHose\Infrastructure\bin\Debug\netcoreapp2.2\Core.dll
+C:\Users\caulf\BerylliumGardenHose\Infrastructure\bin\Debug\netcoreapp2.2\Core.pdb
+C:\Users\caulf\BerylliumGardenHose\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.csprojAssemblyReference.cache
+C:\Users\caulf\BerylliumGardenHose\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\caulf\BerylliumGardenHose\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\caulf\BerylliumGardenHose\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.AssemblyInfo.cs
+C:\Users\caulf\BerylliumGardenHose\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.csproj.CopyComplete
+C:\Users\caulf\BerylliumGardenHose\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.dll
+C:\Users\caulf\BerylliumGardenHose\Infrastructure\obj\Debug\netcoreapp2.2\Infrastructure.pdb

@@ -894,11 +894,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\caulf\\OneDrive\\source\\repos\\Beryllium\\Core\\Core.csproj",
+      "projectUniqueName": "C:\\Users\\caulf\\BerylliumGardenHose\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "C:\\Users\\caulf\\OneDrive\\source\\repos\\Beryllium\\Core\\Core.csproj",
+      "projectPath": "C:\\Users\\caulf\\BerylliumGardenHose\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\caulf\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\caulf\\OneDrive\\source\\repos\\Beryllium\\Core\\obj\\",
+      "outputPath": "C:\\Users\\caulf\\BerylliumGardenHose\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

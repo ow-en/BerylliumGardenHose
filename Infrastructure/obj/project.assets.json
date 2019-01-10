@@ -7513,11 +7513,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\caulf\\OneDrive\\source\\repos\\Beryllium\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\caulf\\BerylliumGardenHose\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\caulf\\OneDrive\\source\\repos\\Beryllium\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "C:\\Users\\caulf\\BerylliumGardenHose\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\caulf\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\caulf\\OneDrive\\source\\repos\\Beryllium\\Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\caulf\\BerylliumGardenHose\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7536,8 +7536,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\caulf\\OneDrive\\source\\repos\\Beryllium\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\caulf\\OneDrive\\source\\repos\\Beryllium\\Core\\Core.csproj"
+            "C:\\Users\\caulf\\BerylliumGardenHose\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\caulf\\BerylliumGardenHose\\Core\\Core.csproj"
             }
           }
         }
