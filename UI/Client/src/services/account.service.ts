@@ -14,7 +14,7 @@ class AccountService extends BaseService {
     return this.instance || (this.instance = new this());
   }
 
-  public register(UserRegistration: UserRegistration): Observable<any> {
+  public register(userRegistration: UserRegistration): Observable<any> {
     return Observable.fromPromise(
       axios.post(`${this.api}/accounts`, userRegistration)
     )

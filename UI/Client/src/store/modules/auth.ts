@@ -1,88 +1,88 @@
-import { Credentials } from "../../models/credentials.interface";
-import { authService } from "../../services/auth.service";
-import { EventBus } from "../../event-bus";
+import { Credentials } from '../../models/credentials.interface';
+import { authService } from '../../services/auth.service';
+import { EventBus } from '../../event-bus';
 
-const state = { token: localStorage.getItem("auth-token") || "", status: "" };
+const state = { token: localStorage.getItem('auth-token') || '', status: '' };
 
 const getters = {
   isAuthenticated: (authState: any) => !!authState.token,
   authStatus: (authState: any) => authState.status,
-  authToken: (authState: any) => authState.token
+  authToken: (authState: any) => authState.token,
 };
 
 const actions = {
   authRequest: (
     { commit, dispatch }: { commit: any; dispatch: any },
-    credentials: Credentials
+    credentials: Credentials,
   ) => {
     return new Promise((resolve, reject) => {
-      commit("authRequest");
+      commit('authRequest');
       authService.login(credentials).subscribe(
         (result: any) => {
-          localStorage.setItem("auth-token", result); // stash auth token in localStorage
-          commit("authSuccess", result);
-          EventBus.$emit("logged-in", null);
-          dispatch("user/userRequest", null, { root: true });
+          localStorage.setItem('auth-token', result); // stash auth token in localStorage
+          commit('authSuccess', result);
+          EventBus.$emit('logged-in', null);
+          dispatch('user/userRequest', null, { root: true });
           resolve(result);
         },
         (errors: any) => {
-          commit("authError", errors);
-          localStorage.removeItem("auth-token");
+          commit('authError', errors);
+          localStorage.removeItem('auth-token');
           reject(errors);
-        }
+        },
       );
     });
   },
   facebookAuthRequest: (
     { commit, dispatch }: { commit: any; dispatch: any },
-    accessToken: string
+    accessToken: string,
   ) => {
     return new Promise((resolve, reject) => {
-      commit("authRequest");
+      commit('authRequest');
       authService.facebookLogin(accessToken).subscribe(
         (result: any) => {
-          localStorage.setItem("auth-token", result);
-          commit("authSuccess", result);
-          EventBus.$emit("logged-in", null);
-          dispatch("user/userRequest", null, { root: true });
+          localStorage.setItem('auth-token', result);
+          commit('authSuccess', result);
+          EventBus.$emit('logged-in', null);
+          dispatch('user/userRequest', null, { root: true });
           resolve(result);
         },
         (errors: any) => {
-          commit("authError", errors);
-          localStorage.removeItem("auth-token");
+          commit('authError', errors);
+          localStorage.removeItem('auth-token');
           reject(errors);
-        }
+        },
       );
     });
   },
   authLogout: ({ commit, dispatch }: { commit: any; dispatch: any }) => {
     return new Promise((resolve, reject) => {
-      commit("authLogout");
-      localStorage.removeItem("auth-token");
+      commit('authLogout');
+      localStorage.removeItem('auth-token');
       resolve();
     });
-  }
+  },
 };
 
 const mutations = {
   authRequest: (authState: any) => {
-    authState.status = "attempting authentication request";
+    authState.status = 'attempting authentication request';
   },
   authSuccess: (authState: any, authToken: string) => {
-    authState.status = "authentication succeeded";
+    authState.status = 'authentication succeeded';
     authState.token = authToken;
   },
   authError: (authState: any) => {
-    authState.status = "error";
+    authState.status = 'error';
   },
   authLogout: (authState: any) => {
-    authState.token = "";
-  }
+    authState.token = '';
+  },
 };
 
 export default {
   state,
   getters,
   actions,
-  mutations
+  mutations,
 };

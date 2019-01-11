@@ -1,5 +1,5 @@
-import axios from "axios";
-import { BaseService } from "./base.service";
+import axios from 'axios';
+import { BaseService } from './base.service';
 
 class DashboardService extends BaseService {
   private static instance: DashboardService;

@@ -1,6 +1,6 @@
-import axios from "axios";
-import { BaseService } from "./base.service";
-import { Observable } from "rxjs/Rx";
+import axios from 'axios';
+import { BaseService } from './base.service';
+import { Observable } from 'rxjs/Rx';
 
 class ProfileService extends BaseService {
   private static instance: ProfileService;
@@ -16,7 +16,7 @@ class ProfileService extends BaseService {
   public get(): Observable<any> {
     return Observable.fromPromise(axios.get(`${this.api}/profile/me`))
       .map((res: any) => res.data)
-      .catch(error => this.handleError(error.response));
+      .catch((error) => this.handleError(error.response));
   }
 }
 
