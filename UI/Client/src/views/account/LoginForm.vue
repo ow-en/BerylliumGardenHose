@@ -1,86 +1,116 @@
+
+
+
 <template>
-  <section class="section">
-    <div class="container has-text-centered">
-      <div class="column is-4 is-offset-4">
-        <h3 class="title has-text-grey">Login</h3>
-        <p class="subtitle has-text-grey">Please login to proceed</p>
-        <article class="message is-success" v-if="$route.query.new">
-          <div class="message-body">
-            <strong>You're all set {{$route.query.firstName}}!</strong> Login with your password to continue.
-          </div>
-        </article>
-        <div class="box">
-          <form @submit.prevent="handleSubmit">
-            <div class="field">
-              <div class="control">
-                <input
-                  class="input is-large"
-                  type="email"
-                  placeholder="Email"
-                  autofocus
-                  v-model="credentials.userName"
-                >
-              </div>
-            </div>
-            <div class="field">
-              <div class="control">
-                <input
-                  class="input is-large"
-                  type="password"
-                  placeholder="Password"
-                  v-model="credentials.password"
-                >
-              </div>
-            </div>
-            <Spinner v-bind:show="isBusy"/>
-            <button class="button is-block is-info is-large is-fullwidth" type="submit">Login</button>
-            <div class="errors-container" v-if="errors">{{errors}}</div>
-          </form>
-        </div>
-        <p class="has-text-grey">
-          <router-link to="/register">Sign Up</router-link>
-        </p>
-      </div>
-    </div>
-  </section>
+  <v-app id="login">
+    <v-content>
+      <v-container fluid fill-height>
+        <v-layout align-center justify-center>
+          <v-flex xs12 sm8 md4>
+            <v-card class="elevation-12">
+              <v-toolbar dark color="primary">
+                <v-toolbar-title>Login</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-tooltip bottom>
+                  <v-btn slot="activator" to="register" icon large>
+                    <v-icon large>account_box</v-icon>
+                  </v-btn>
+                  <span>Register</span>
+                </v-tooltip>
+                <v-tooltip right>
+                  <v-btn slot="activator" icon large target="_blank">
+                    <v-icon large>power</v-icon>
+                  </v-btn>
+                  <span>Test 2</span>
+                </v-tooltip>
+              </v-toolbar>
+              <v-card-title primary-title v-if="$route.query.new">
+                <div>
+                  <div class="headline">You're all set!</div>
+                  <span
+                    class="grey--text"
+                  >Thanks, {{$route.query.firstName}}. Login with your password to proceed.</span>
+                </div>
+              </v-card-title>
+              <v-card-text>
+                <v-form @submit.prevent="handleSubmit" id="loginForm">
+                  <v-text-field
+                    prepend-icon="person"
+                    name="login"
+                    label="Username"
+                    type="text"
+                    v-model="credentials.userName"
+                    required
+                  ></v-text-field>
+                  <v-text-field
+                    id="password"
+                    prepend-icon="lock"
+                    name="password"
+                    label="Password"
+                    type="password"
+                    v-model="credentials.password"
+                    required
+                  ></v-text-field>
+                </v-form>
+              </v-card-text>
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <div class="errors-container" v-if="errors">{{errors}}</div>
+                <v-btn
+                  color="primary"
+                  type="submit"
+                  form="loginForm"
+                  :loading="isBusy"
+                  :disabled="isBusy"
+                >Login</v-btn>
+              </v-card-actions>
+              <p class="has-text-grey"></p>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-content>
+  </v-app>
 </template>
 
 <script lang="ts">
-import Spinner from "@/components/common/Spinner.vue"; // @ is an alias to /src
 import { Component, Vue } from "vue-property-decorator";
 import { Credentials } from "../../models/credentials.interface";
 // this.$route.query.page
 
 @Component({
   components: {
-    Spinner
+
   }
 })
 export default class RegistrationForm extends Vue {
   private isBusy: boolean = false;
   private errors: string = "";
-  private credentials = {} as Credentials;
+  private credentials : any = {} as Credentials;
+  private showThis: boolean = false;
+
 
   private created() {
-    if (this.$route.query.new) {
-      this.credentials.userName = this.$route.query.email;
-    }
+  if (this.$route.query.new) {
+    this.credentials.userName = this.$route.query.email;
   }
+}
+
 
   private handleSubmit() {
-    this.isBusy = true;
-    this.$store
-      .dispatch("auth/authRequest", this.credentials)
-      .then(result => {
-        this.$router.push("/dashboard/home");
-      })
-      .catch(err => {
-        this.errors = err;
-      })
-      .then(() => {
-        this.isBusy = false;
-      });
-  }
+  this.isBusy = true;
+  this.$store
+    .dispatch("auth/authRequest", this.credentials)
+    .then(result => {
+      this.$router.push("/dashboard/home");
+    })
+    .catch(err => {
+      this.errors = err;
+    })
+    .then(() => {
+      this.isBusy = false;
+    });
+}
 }
 </script>
 

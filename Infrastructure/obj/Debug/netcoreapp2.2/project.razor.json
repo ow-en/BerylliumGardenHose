@@ -1,14 +1,6 @@
 {
-  "ProjectFilePath": "c:\\Users\\caulf\\BerylliumGardenHose\\Infrastructure\\Infrastructure.csproj",
+  "ProjectFilePath": "c:\\Users\\OGeoghegan\\BerylliumGardenHose\\Infrastructure\\Infrastructure.csproj",
   "TargetFramework": "netcoreapp2.2",
   "TagHelpers": [],
-  "Configuration": {
-    "ConfigurationName": "UnsupportedRazor",
-    "LanguageVersion": "1.0",
-    "Extensions": [
-      {
-        "ExtensionName": "UnsupportedRazorExtension"
-      }
-    ]
-  }
+  "Configuration": null
 }
