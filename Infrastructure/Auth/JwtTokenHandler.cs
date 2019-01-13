@@ -6,6 +6,7 @@ using System.Text;
 using Infrastructure.Interfaces;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using ILogger = Core.Interfaces.Services.ILogger;
 
 namespace Infrastructure.Auth
 {

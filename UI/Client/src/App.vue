@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <Nav/>
-    <router-view/>
-  </div>
+  <v-app>
+    <div>
+      <Nav/>
+      <router-view/>
+    </div>
+  </v-app>
 </template>
   
 <script lang="ts">
@@ -13,7 +15,7 @@ import Nav from '@/components/common/Nav.vue'; // @ is an alias to /src
     Nav,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue { }
 </script>
 
 <style>

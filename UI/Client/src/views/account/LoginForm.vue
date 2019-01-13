@@ -86,31 +86,31 @@ import { Credentials } from "../../models/credentials.interface";
 export default class RegistrationForm extends Vue {
   private isBusy: boolean = false;
   private errors: string = "";
-  private credentials : any = {} as Credentials;
+  private credentials: any = {} as Credentials;
   private showThis: boolean = false;
 
 
   private created() {
-  if (this.$route.query.new) {
-    this.credentials.userName = this.$route.query.email;
+    if (this.$route.query.new) {
+      this.credentials.userName = this.$route.query.email;
+    }
   }
-}
 
 
   private handleSubmit() {
-  this.isBusy = true;
-  this.$store
-    .dispatch("auth/authRequest", this.credentials)
-    .then(result => {
-      this.$router.push("/dashboard/home");
-    })
-    .catch(err => {
-      this.errors = err;
-    })
-    .then(() => {
-      this.isBusy = false;
-    });
-}
+    this.isBusy = true;
+    this.$store
+      .dispatch("auth/authRequest", this.credentials)
+      .then(result => {
+        this.$router.push("/dashboard/home");
+      })
+      .catch(err => {
+        this.errors = err;
+      })
+      .then(() => {
+        this.isBusy = false;
+      });
+  }
 }
 </script>
 
