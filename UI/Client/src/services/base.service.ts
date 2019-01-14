@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs/Rx';
 
 export abstract class BaseService {
-  protected readonly api = 'http://localhost:44379/api';
+  protected readonly api = 'https://localhost:5001/api';
 
   protected handleError(error: any) {
     const applicationError = error.headers['Application-Error'];

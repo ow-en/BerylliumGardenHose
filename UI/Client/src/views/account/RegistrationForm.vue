@@ -39,12 +39,7 @@
 
             <div class="field">
               <div class="control">
-                <input
-                  class="input is-large"
-                  type="password"
-                  placeholder="Password"
-                  v-model="user.password"
-                >
+                <input class="input is-large" placeholder="Username" v-model="user.userName">
               </div>
             </div>
 
@@ -53,8 +48,8 @@
                 <input
                   class="input is-large"
                   type="text"
-                  placeholder="Location"
-                  v-model="user.location"
+                  placeholder="Password"
+                  v-model="user.password"
                 >
               </div>
             </div>
@@ -99,7 +94,7 @@ export default class RegistrationForm extends Vue {
             query: {
               new: "true",
               firstName: this.user.firstName,
-              email: this.user.email
+              userName: this.user.userName
             }
           });
         },
