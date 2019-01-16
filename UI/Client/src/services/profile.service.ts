@@ -14,7 +14,7 @@ class ProfileService extends BaseService {
   }
 
   public get(): Observable<any> {
-    return Observable.fromPromise(axios.get(`${this.api}/profile/me`))
+    return Observable.fromPromise(axios.get(`${this.api}/dashboard/home`))
       .map((res: any) => res.data)
       .catch((error) => this.handleError(error.response));
   }

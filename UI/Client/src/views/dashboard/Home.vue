@@ -15,7 +15,6 @@
             <div class="card-content">
               <div class="content">
                 <h4>You've reached a protected area!</h4>
-                <Spinner v-bind:show="isBusy"/>
                 <p v-if="homeData.message">{{homeData.message}}</p>
                 <p v-if="homeData.firstName">
                   <strong>Name:</strong>
@@ -50,7 +49,6 @@
 </template>
 
 <script lang="ts">
-import Spinner from "@/components/common/Spinner.vue"; // @ is an alias to /src
 import { Component, Vue } from "vue-property-decorator";
 import { mapGetters } from "vuex";
 import { dashboardService } from "../../services/dashboard.service";
@@ -60,7 +58,6 @@ import { dashboardService } from "../../services/dashboard.service";
     profile: "user/profile,"
   }),
   components: {
-    Spinner
   }
 })
 export default class DashboardHome extends Vue {

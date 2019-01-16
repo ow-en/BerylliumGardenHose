@@ -6,7 +6,6 @@
         <a href="javascript:void(0)" v-if="!isBusy" v-on:click="launchFbLogin">
           <!-- <img src="../../assets/facebook-login.png" alt="Login with your facebook account"> -->
         </a>
-        <Spinner v-bind:show="isBusy"/>
         <div class="errors-container" v-if="failed">
           <p>Oops! Your facebook login failed.</p>
           <ul>
@@ -21,11 +20,9 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Spinner from "@/components/common/Spinner.vue"; // @ is an alias to /src
 
 @Component({
   components: {
-    Spinner
   }
 })
 export default class FacebookLogin extends Vue {

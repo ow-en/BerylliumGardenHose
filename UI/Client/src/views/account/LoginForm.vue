@@ -83,7 +83,7 @@ import { Credentials } from "../../models/credentials.interface";
 
   }
 })
-export default class RegistrationForm extends Vue {
+export default class LoginForm extends Vue {
   private isBusy: boolean = false;
   private errors: string = "";
   private credentials: any = {} as Credentials;
@@ -92,7 +92,7 @@ export default class RegistrationForm extends Vue {
 
   private created() {
     if (this.$route.query.new) {
-      this.credentials.userName = this.$route.query.email;
+      this.credentials.userName = this.$route.query.userName;
     }
   }
 

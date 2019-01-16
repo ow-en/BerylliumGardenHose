@@ -39,12 +39,7 @@
 
             <div class="field">
               <div class="control">
-                <input
-                  class="input is-large"
-                  type="password"
-                  placeholder="Password"
-                  v-model="user.password"
-                >
+                <input class="input is-large" placeholder="Username" v-model="user.userName">
               </div>
             </div>
 
@@ -53,12 +48,11 @@
                 <input
                   class="input is-large"
                   type="text"
-                  placeholder="Location"
-                  v-model="user.location"
+                  placeholder="Password"
+                  v-model="user.password"
                 >
               </div>
             </div>
-            <Spinner v-bind:show="isBusy"/>
             <button class="button is-block is-info is-large is-fullwidth" type="submit">Submit</button>
             <div class="errors-container" v-if="errors">{{errors}}</div>
           </form>
@@ -72,14 +66,12 @@
 </template>
 
 <script lang="ts">
-import Spinner from "@/components/common/Spinner.vue"; // @ is an alias to /src
 import { Component, Vue } from "vue-property-decorator";
 import { UserRegistration } from "../../models/user.registration.interface";
 import { accountService } from "../../services/account.service";
 
 @Component({
   components: {
-    Spinner
   }
 })
 export default class RegistrationForm extends Vue {
@@ -99,7 +91,7 @@ export default class RegistrationForm extends Vue {
             query: {
               new: "true",
               firstName: this.user.firstName,
-              email: this.user.email
+              userName: this.user.userName
             }
           });
         },
